@@ -9,7 +9,7 @@ const Counter = (): JSX.Element => {
   return (
     <div>
       <button onClick={() => dispatch(counterChange("sub"))}>-</button>
-      <h1>{counter}</h1>
+      <h1 data-testid="counter">{counter}</h1>
       <button onClick={() => dispatch(counterChange("add"))}>+</button>
     </div>
   );

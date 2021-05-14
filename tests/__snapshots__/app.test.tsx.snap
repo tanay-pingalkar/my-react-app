@@ -1,7 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`gonna test app should match snapshot 1`] = `
-<h1>
-  Op
-</h1>
+<div>
+  <button
+    onClick={[Function]}
+  >
+    -
+  </button>
+  <h1
+    data-testid="counter"
+  >
+    0
+  </h1>
+  <button
+    onClick={[Function]}
+  >
+    +
+  </button>
+</div>
 `;
