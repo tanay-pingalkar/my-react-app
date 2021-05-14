@@ -1,12 +1,12 @@
 const path = require("path");
 const webpack = require("webpack");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: path.resolve(__dirname, "/../src/index.tsx"),
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "../dist"),
     filename: "bundle.js",
   },
   module: {
@@ -33,12 +33,14 @@ module.exports = {
     historyApiFallback: true,
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      name: "index.html",
-      inject: false,
-      hash: true,
-      template: path.resolve(__dirname, "/../public/index.html"),
-    }),
     new MiniCssExtractPlugin(),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: __dirname + "/../public",
+          to: __dirname + "/../dist",
+        },
+      ],
+    }),
   ],
 };
