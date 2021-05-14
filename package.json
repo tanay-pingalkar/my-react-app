@@ -4,8 +4,8 @@
   "main": "src/app.tsx",
   "license": "MIT",
   "scripts": {
-    "serve": "webpack serve --open --config ./webpack.dev.js",
-    "build": "webpack --config ./webpack.prod.js",
+    "serve": "webpack serve --open --config ./webpack/webpack.dev.js",
+    "build": "webpack --config ./webpack/webpack.prod.js",
     "lint": "npx eslint .",
     "lint:fix": "npx eslint . --fix",
     "format": "npx prettier --write .",
