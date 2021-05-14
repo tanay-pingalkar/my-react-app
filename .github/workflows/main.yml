@@ -1,0 +1,28 @@
+
+name: Checking code quality
+
+on:
+
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: installing deps
+        run:  yarn install --frozen
+        
+      - name: linting
+        run: yarn lint
+        
+      - name: formating
+        run: yarn format
+        
+      - name: test
+        run: yarn test
