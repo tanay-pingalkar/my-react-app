@@ -8,6 +8,12 @@ module.exports = merge(
     module: {
       rules: [{ enforce: "pre", test: /\.js$/, loader: "source-map-loader" }],
     },
+    resolve: {
+      alias: {
+        "react-dom": "@hot-loader/react-dom",
+      },
+    },
   },
+
   config,
 );

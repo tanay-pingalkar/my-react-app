@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Counter from "./components/counter";
+import { hot } from "react-hot-loader";
 
 const App = (): JSX.Element => {
   return (
@@ -12,4 +13,4 @@ const App = (): JSX.Element => {
   );
 };
 
-export default App;
+export default hot(module)(App);
