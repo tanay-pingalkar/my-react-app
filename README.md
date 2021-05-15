@@ -23,7 +23,33 @@
 - `yarn lint:fix` to fix code in eslint
 - `yarn test` to test code in jest
 
-
+## file structure
+```
+.
+├── .github
+|   └── workflow
+|       └── ...
+├── .vscode
+|   └── ...
+├── src
+|   ├── components
+|   |   └── ...
+|   ├── redux
+|   |   ├── actions
+|   |   ├── reducers
+|   |   └── ...
+|   ├── styles
+|   |   └── ...
+|   ├── utils
+|   |   └── ...
+|   └── ...
+├── tests
+|   ├── __snapshot
+|   └── ...
+├── webpack
+|   └── ...
+└── ...
+```
 
 ## using vscode tasks
 this repo recommend using vscode to get full advancement code linting and formating. With linting and formating , i have also made vscode tasks that you can run from your vscode. go to terminal > Run task > you will get list of tasks , run one of them.
