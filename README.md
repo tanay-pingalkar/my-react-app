@@ -90,3 +90,7 @@ this repo is a [react](https://reactjs.org/) boilerplate and uses redux for stat
 
 ## using vscode tasks
 this repo recommend using vscode to get full advancement code linting and formating. With linting and formating , i have also made vscode tasks that you can run from your vscode. go to terminal > Run task > you will get list of tasks , run one of them.
+
+## why from scratch
+why you should make react app from scratch if you have create-react-app. create-react-app itself says that is it for learning, it is not truely suitable for production. If you make react app from scratch, you will get good understanding of react and webpack. Making your own react app gives you power of configurations,this can be very usefull if you app grows. create-react-app is actually slow for some reasons. I spent lot of time collecting pieces of code that will actually work with my stack. Thats why I made a repo and put everything in this that i will use it for my future project and open sourced it to give other poeple its benefit.
+
