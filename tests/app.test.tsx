@@ -35,6 +35,7 @@ describe("gonna test app", () => {
     expect(app).toMatchSnapshot();
   });
   it("should render app properly", async () => {
+    const spy = jest.spyOn(store, "dispatch");
     render(
       <MemoryRouter>
         <Provider store={store}>
@@ -56,6 +57,7 @@ describe("gonna test app", () => {
     act(() => {
       fireEvent.click(sub);
     });
+    expect(spy).toBeCalledTimes(3);
     expect(text).toHaveTextContent("-1");
   });
 });

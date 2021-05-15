@@ -1,9 +1,8 @@
-const path = require("path");
-const webpack = require("webpack");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CopyWebpackPlugin = require("copy-webpack-plugin");
+import path from "path";
+import MiniCssExtractPlugin from "mini-css-extract-plugin";
+import CopyWebpackPlugin from "copy-webpack-plugin";
 
-module.exports = {
+export default {
   entry: path.resolve(__dirname, "/../src/index.tsx"),
   output: {
     path: path.resolve(__dirname, "../dist"),
